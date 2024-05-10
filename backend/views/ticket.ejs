@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Ticket</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .ticket {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .img-container {
+            width: 50px;
+            width: 50px;
+        }
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .location {
+            max-width: 300px;
+        }
+
+        .secondary-text {
+            color: #777;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .primary-text {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .bold-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ticket">
+        <div class="flex">
+            <div class="img-container">
+                <img src="https://i.ibb.co/j8Npf1t/travelling.png" alt="">
+            </div>
+            <h1>Boarding Pass</h1>
+        </div>
+        <div class="flex justify-between" style="margin-top: 20px;">
+            <div class="location">
+                <span class="secondary-text">From</span>
+                <p class="bold-text">
+                    <%= sourceLocation %>
+                </p>
+                <span class="primary-text">
+                    <%= sourceAirport %>
+                </span>
+            </div>
+            <div class="img-container" style="margin: 30px 0;">
+                <img src="https://i.ibb.co/j8Npf1t/travelling.png" alt="">
+            </div>
+            <div class="location">
+                <span class="secondary-text">To</span>
+                <p class="bold-text">
+                    <%= destinationLocation %>
+                </p>
+                <span class="primary-text">
+                    <%= destinationAirport %>
+                </span>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <p>Departure Time: <span class="primary-text">
+                    <%= departure %> , <%= time %>.00
+                </span></p>
+        </div>
+        <div class="flex justify-between">
+            <div>
+                <p class="secondary-text">Passenger Name</p>
+                <span class="primary-text">
+                    <%= name %>
+                </span>
+            </div>
+            <div>
+                <p class="secondary-text">Flight</p>
+                <span class="primary-text">
+                    <%= flight %>
+                </span>
+            </div>
+            <div>
+                <p class="secondary-text">Gate</p>
+                <span class="primary-text">
+                    <%= gate %>
+                </span>
+            </div>
+            <div>
+                <p class="secondary-text">Terminal</p>
+                <span class="primary-text">
+                    <%= terminal %>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.btnClass {
+  padding: 0.5rem 1.4rem;
+  border-radius: 0.38rem;
+}
+
+.bgImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.primaryBg {
+  background-color: #eb1933;
+}
+.primaryBg:hover {
+  background-color: #ff001e;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.primaryText {
+  color: #eb1933;
+}
+
+/* ----custom scrool bar ------ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(202, 186, 186);
+}

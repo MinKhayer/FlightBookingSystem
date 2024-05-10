@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "deb5cb5a-b9ec-49e8-b4f4-e487ecfa2a2e",
+		"name": "AeroSky",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33647115"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user.register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"shz\",\r\n    \"email\": \"web.shahidul.alam@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/user/register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user.login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"web.shahidul.alam@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/user/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "airline",
+			"item": [
+				{
+					"name": "airline.getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/airline",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"airline"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "airline.create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Biman Bangladesh Airways\",\r\n    \"logo\": \"Logo Url\",\r\n    \"code\": \"BG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/airline",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"airline"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "destination",
+			"item": [
+				{
+					"name": "destination.create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Chennai\",\r\n    \"airport\": \"Chennai International Airport\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/destination",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destination.getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/destination",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destination.get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/destination/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"destination",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "660d474b90e9c3f7f636ec22"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "route",
+			"item": [
+				{
+					"name": "route.getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/route",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"route"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "route.get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/route/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"route",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "660d5e44fa9b459b9b539e17"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "route.delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/route/660d55650821f1afd1d257da",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"route",
+								"660d55650821f1afd1d257da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "route.create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": \"660d474b90e9c3f7f636ec22\",\r\n    \"to\": \"660d476d90e9c3f7f636ec24\",\r\n    \"departure\": 20,\r\n    \"arrival\": 23,\r\n    \"day\": \"Sunday\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/route",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"route"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "flight",
+			"item": [
+				{
+					"name": "flight.getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/flight",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight.get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/flight/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "660d5ef9a9994787fb8a6197"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight.search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"route\": \"65ff6884f19756526272b288\",\r\n    \"departure\": 123,\r\n    \"roundTrip\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/flight/search",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight.create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bolaka\",\r\n    \"airline\": \"65ff6731a8069ab24e109677\",\r\n    \"model\": \"Boeing 737-800\",\r\n    \"serial\": 127,\r\n    \"maximumCapacity\": 75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/flight",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight.assignRoute",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bolaka\",\r\n    \"airline\": \"65ff6731a8069ab24e109677\",\r\n    \"model\": \"Boeing 737-800\",\r\n    \"serial\": 127,\r\n    \"maximumCapacity\": 75,\r\n    \"routes\": [\"65ff6884f19756526272b288\",\"65ff683cf19756526272b286\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/flight/:id/assign",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								":id",
+								"assign"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWZmNjAzYTFhNjNlYjg4MjIxMjQyMjIiLCJ1c2VybmFtZSI6InNoeiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTcxMjE0NjIxMywiZXhwIjoxNzEyNzUxMDEzfQ.B0cC4dP9FpP70x9DELMKmYRTqp8-8lM_OUel7vaHUGQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
